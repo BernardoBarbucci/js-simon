@@ -14,4 +14,12 @@ const timer = setInterval(function(){
     const dateBetween = countdownEnd.getTime() - nowTime.getTime();
 
     seconds.innerHTML = Math.floor(dateBetween % (60 * 1000) / 1000);
-})
+    minutes.innerHTML = Math.floor((dateBetween % (60 * 60 * 1000)) / (1000 * 60));
+    hours.innerHTML = Math.floor((dateBetween % (60 * 60 * 24 * 1000)) / (1000 * 60 * 60));
+    days.innerHTML = Math.floor((dateBetween / (60 * 60 * 24 * 1000)));
+
+    if ( dateBetween <= 0){
+        clearInterval(timer);
+        document.querySelector('main .bg-countdown .row #timer-countdown h2').innerHTML = 'BYE 2023, WELCOME 2024!';
+    }
+}, 1000)
