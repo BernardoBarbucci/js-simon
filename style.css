@@ -18,12 +18,20 @@
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
+h1{
+    display: flex;
+    justify-content: center;
+    color: #002765;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
 .bg-countdown h2{
     color: #002765;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    flex-direction: column;
 }
 .row{
     display: flex;
